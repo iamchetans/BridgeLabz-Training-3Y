@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini User Interface Layout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- Header -->
+    <header class="ui-header">
+        <h1>User Profile Dashboard</h1>
+        <p>Mini UI Layout Demonstration</p>
+    </header>
+
+    <!-- Main Content Area using Flexbox -->
+    <main class="ui-main">
+        <div class="profile-card">
+            
+            <!-- Card Header with Image -->
+            <div class="card-top">
+                <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&tinysrgb&w=200&h=200&dpr=1" alt="Profile Avatar" class="avatar">
+                <h2>Chetan Sharma</h2>
+                <p class="role">Frontend Developer</p>
+            </div>
+
+            <!-- Form Section -->
+            <form class="profile-form" onsubmit="event.preventDefault();">
+                <div class="form-group">
+                    <label for="username">Update Name</label>
+                    <input type="text" id="username" placeholder="Enter new name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Update Email</label>
+                    <input type="email" id="email" placeholder="Enter new email">
+                </div>
+
+                <div class="button-group">
+                    <button type="submit" class="btn btn-save">Save Changes</button>
+                    <button type="button" class="btn btn-cancel">Cancel</button>
+                </div>
+            </form>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="ui-footer">
+        <p>Assignment 8 - Question 10 Completed by Chetan | BridgeLabz Training</p>
+    </footer>
+
+</body>
+</html>
