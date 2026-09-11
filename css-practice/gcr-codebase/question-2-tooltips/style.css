@@ -1,0 +1,103 @@
+/* General Layout Setup */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header, footer {
+    background-color: #34495e;
+    color: white;
+    padding: 20px;
+}
+
+/* Flexbox Alignment: Centering all examples on the page */
+.flex-center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px; /* Space between the examples */
+    flex-grow: 1; /* Pushes footer to the bottom */
+}
+
+/* ==========================================
+   CSS Tooltip Implementation
+   ========================================== */
+
+/* 
+  The container must be position: relative so the absolute 
+  tooltip positions itself relative to this container. 
+*/
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Styling the elements to be hovered */
+.hover-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2980b9;
+    border-bottom: 2px dashed #2980b9;
+}
+
+.hover-btn {
+    padding: 10px 20px;
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.hover-icon {
+    font-size: 30px;
+}
+
+/* The actual Tooltip Box (Hidden by default) */
+.tooltip-box {
+    visibility: hidden; /* Makes it unclickable when hidden */
+    opacity: 0; /* Fully transparent */
+    
+    /* Absolute positioning to place it above the element */
+    position: absolute;
+    bottom: 120%; /* Pushes it above the container */
+    left: 50%;
+    transform: translateX(-50%); /* Centers it perfectly */
+    
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    white-space: nowrap; /* Prevents text from breaking into multiple lines */
+    
+    /* Smooth fade-in transition as required */
+    transition: opacity 0.3s ease-in-out, visibility 0.3s;
+}
+
+/* Adding the small triangle arrow at the bottom of the tooltip */
+.tooltip-box::after {
+    content: "";
+    position: absolute;
+    top: 100%; /* At the bottom of the tooltip */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent; /* Arrow pointing down */
+}
+
+/* Hover effect: Changing opacity to show the tooltip */
+.tooltip-container:hover .tooltip-box {
+    visibility: visible;
+    opacity: 1;
+}
