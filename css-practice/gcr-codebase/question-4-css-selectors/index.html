@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors Practice Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>CSS Selectors Demonstration</h1>
+        <p>Practicing different types of CSS Selectors and Combinators</p>
+    </header>
+
+    <main class="container">
+        
+        <!-- Basic Selectors -->
+        <section id="basic-selectors" class="card">
+            <h2>Basic Selectors</h2>
+            <p>This is a standard paragraph styled using an <strong>Element Selector</strong>.</p>
+            <p class="highlight-text">This paragraph is styled using a <strong>Class Selector</strong>.</p>
+            <p id="unique-text">This paragraph is styled using an <strong>ID Selector</strong>.</p>
+        </section>
+
+        <!-- Attribute Selectors -->
+        <section class="card">
+            <h2>Attribute Selectors</h2>
+            <p>Links styling based on attributes:</p>
+            <a href="https://example.com" target="_blank">External Link (Opens in new tab)</a>
+            <br><br>
+            <a href="/internal-page">Internal Link</a>
+        </section>
+
+        <!-- Combinators -->
+        <section class="card combinator-section">
+            <h2>Combinators</h2>
+            
+            <div class="parent-box">
+                <p>This paragraph is a direct child (>) of the parent box.</p>
+                <div>
+                    <p>This paragraph is a descendant (space) of the parent box.</p>
+                </div>
+            </div>
+
+            <h3 class="adjacent-heading">Heading for Sibling Selectors</h3>
+            <p>This paragraph is an adjacent sibling (+) to the heading above.</p>
+            <p>This paragraph is a general sibling (~) to the heading.</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Assignment 8 - Question 4 Completed by Chetan</p>
+    </footer>
+
+</body>
+</html>
