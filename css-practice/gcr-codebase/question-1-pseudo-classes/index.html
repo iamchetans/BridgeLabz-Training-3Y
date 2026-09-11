@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-Classes Demonstration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- Semantic Header -->
+    <header>
+        <h1>Pseudo-Classes Demonstration</h1>
+    </header>
+
+    <!-- Semantic Main container with Flexbox -->
+    <main class="flex-row-container">
+        
+        <!-- Example 1: Link (:hover) -->
+        <section class="example-box">
+            <a href="#" class="demo-link">Hover over me!</a>
+            <p><strong>:hover</strong> changes the link's background and text color when the mouse pointer is over it.</p>
+        </section>
+
+        <!-- Example 2: Button (:active & :focus) -->
+        <section class="example-box">
+            <button class="demo-btn">Click or Tab Focus me!</button>
+            <p><strong>:active</strong> changes the button color when clicked. <strong>:focus</strong> adds an outline when selected via the Tab key.</p>
+        </section>
+
+        <!-- Example 3: List Items (:nth-child) -->
+        <section class="example-box">
+            <ul class="demo-list">
+                <li>List Item 1</li>
+                <li>List Item 2</li>
+                <li>List Item 3</li>
+                <li>List Item 4</li>
+            </ul>
+            <p><strong>:nth-child(odd/even)</strong> applies alternate background colors to the list items automatically.</p>
+        </section>
+
+    </main>
+
+    <!-- Semantic Footer -->
+    <footer>
+        <p>Assignment 8 - Question 1 Completed by Chetan</p>
+    </footer>
+
+</body>
+</html>
