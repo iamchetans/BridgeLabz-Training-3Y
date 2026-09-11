@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f7;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header, footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+}
+
+/* Flexbox to distribute multiple examples evenly across the page */
+.effects-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    flex-grow: 1;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.effect-card {
+    background-color: white;
+    width: 300px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.effect-card h3 {
+    color: #2c3e50;
+    margin: 0;
+}
+
+.effect-card p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Base Button Style for Combined Effects */
+.combo-btn {
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+    /* Smooth, visually balanced transition for transforms, colors, and shadows */
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Button 1: Grow & Color Change + Shadow */
+.btn-1 {
+    background-color: #3498db;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.btn-1:hover {
+    transform: scale(1.08); /* Grow slightly */
+    background-color: #2980b9; /* Change color */
+    box-shadow: 0 8px 15px rgba(52, 152, 219, 0.4); /* Enhanced shadow */
+}
+
+/* Button 2: Tilt & Lift + Shadow */
+.btn-2 {
+    background-color: #e74c3c;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.btn-2:hover {
+    transform: translateY(-5px) rotate(3deg); /* Lift and rotate */
+    background-color: #c0392b;
+    box-shadow: 0 10px 20px rgba(231, 76, 60, 0.4);
+}
+
+/* Button 3: Scale & Deep Glow */
+.btn-3 {
+    background-color: #2ecc71;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.btn-3:hover {
+    transform: scale(1.1);
+    background-color: #27ae60;
+    box-shadow: 0 10px 20px rgba(46, 204, 113, 0.4);
+}
